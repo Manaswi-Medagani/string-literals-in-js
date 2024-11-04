@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num ** 2);
+console.log("Squared Numbers:", squaredNumbers);
+
+
+const names = ["alice", "bob", "charlie"];
+const uppercasedNames = names.map(name => name.toUpperCase());
+console.log("Uppercased Names:", uppercasedNames); 
+
+
+const products = [
+  { name: "Laptop", price: 1000 },
+  { name: "Phone", price: 500 },
+  { name: "Tablet", price: 700 }
+];
+const expensiveProducts = products
+  .filter(product => product.price > 500)
+  .map(product => product.price);
+console.log("Expensive Products Prices:", expensiveProducts); 
+
+
+const purchases = [
+  { price: 10, quantity: 2 },
+  { price: 5, quantity: 4 },
+  { price: 8, quantity: 1 }
+];
+const totalCost = purchases.reduce((total, purchase) => total + purchase.price * purchase.quantity, 0);
+console.log("Total Cost of Purchases:", totalCost); 
+
+    </script>
+</body>
+</html>
